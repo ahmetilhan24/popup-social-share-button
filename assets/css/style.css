@@ -1,0 +1,95 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+.container {
+  background-color: #f6f6ff; }
+
+.popup-container {
+  width: auto;
+  height: auto;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  left: 50%;
+  bottom: 50%;
+  transform: translate(-50%, 0);
+  overflow: hidden; }
+  .popup-container .items-show {
+    top: 0 !important; }
+    .popup-container .items-show .item {
+      width: 50px !important;
+      height: 50px !important;
+      transition: all .3s ease-in-out;
+      margin-bottom: 10px; }
+  .popup-container .items {
+    position: relative; }
+    .popup-container .items .item {
+      width: 0;
+      height: 0;
+      background-color: #616176;
+      border-radius: 50%;
+      transition: all .3s ease-in-out;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+      .popup-container .items .item svg {
+        width: 40%; }
+        .popup-container .items .item svg path {
+          fill: #ffffff; }
+  .popup-container .menu-con {
+    width: 64px;
+    height: 64px;
+    background-color: #565663;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 20; }
+    .popup-container .menu-con .menu-open {
+      width: 0 !important;
+      transition: all .3s ease-in-out; }
+      .popup-container .menu-con .menu-open::before {
+        content: '';
+        width: 32px !important;
+        transform: rotate(45deg) !important;
+        bottom: 0 !important; }
+      .popup-container .menu-con .menu-open::after {
+        content: '';
+        width: 32px !important;
+        transform: rotate(-45deg) !important;
+        top: 0 !important; }
+    .popup-container .menu-con .menu {
+      width: 32px;
+      height: 2.4px;
+      background-color: #fff;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: .2s ease-in-out; }
+      .popup-container .menu-con .menu::before {
+        content: '';
+        position: absolute;
+        width: 16px;
+        height: 2.4px;
+        background-color: #fff;
+        transform: translateY(12px);
+        transition: .2s ease-in-out; }
+      .popup-container .menu-con .menu::after {
+        content: '';
+        position: absolute;
+        width: 16px;
+        height: 2.4px;
+        background-color: #fff;
+        transform: translateY(-12px);
+        transition: .2s ease-in-out; }
