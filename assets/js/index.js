@@ -2,7 +2,7 @@ const menuCon = document.querySelector(".menu-con");
 const menu = document.querySelector(".menu");
 const items = document.querySelector(".items")
 let menuOpen = false;
-menuCon.addEventListener("click", function(){
+menuCon.addEventListener("click", () =>{
     if (!menuOpen){
         menu.classList.add("menu-open");
         items.classList.add("items-show");

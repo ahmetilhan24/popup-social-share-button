@@ -34,7 +34,7 @@ body {
     position: relative; }
     .popup-container .items .item {
       width: 0;
-      height: 0;
+      height: 8px;
       background-color: #616176;
       border-radius: 50%;
       transition: all .3s ease-in-out;
